@@ -1,0 +1,24 @@
+{
+  "name": "js-datacontract",
+  "version": "1.0.0",
+  "description": "Javascript Data Contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/koushikchhetri/js-datacontract.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Data",
+    "Contract"
+  ],
+  "author": "Koushik Chhetri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koushikchhetri/js-datacontract/issues"
+  },
+  "homepage": "https://github.com/koushikchhetri/js-datacontract#readme"
+}
