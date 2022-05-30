@@ -32,7 +32,7 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
                 const eType = _exptectedData;
                 const rType = typeof _receivedData;
                 if (eType !== rType) {
-                    mismatchedAttributeTypes.push(JSON.stringify({ name: objectKey, expected: eType, received: rType, arrayIndex }));
+                    mismatchedAttributeTypes.push({ name: objectKey, expected: eType, received: rType, arrayIndex });
                 }
             }
                 break;
@@ -47,7 +47,7 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
             case 'boolean': {
                 const eType = typeof _exptectedData;
                 if (eType !== rType) {
-                    mismatchedAttributeTypes.push(JSON.stringify({ name: objectKey, expected: eType, received: rType }));
+                    mismatchedAttributeTypes.push({ name: objectKey, expected: eType, received: rType });
                 }
             }
                 break;
@@ -69,7 +69,7 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
                             case 'number':
                             case 'boolean': {
                                 if (eType !== rType) {
-                                    mismatchedAttributeTypes.push(JSON.stringify({ name: i, expected: eType, received: rType }));
+                                    mismatchedAttributeTypes.push({ name: i, expected: eType, received: rType });
                                 }
                             }
                                 break;
@@ -83,11 +83,11 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
                                                 exractData(data, missingAttributes, mismatchedAttributeTypes);
                                             });
                                         } else {
-                                            missingAttributes.push(JSON.stringify({ name: i, expected: _exptectedData[i].typeT, received: rType}));
+                                            missingAttributes.push({ name: i, expected: _exptectedData[i].typeT, received: rType});
                                         }
                                     }
                                 } else {
-                                    mismatchedAttributeTypes.push(JSON.stringify({ name: i, expected: eType, received: rType}));
+                                    mismatchedAttributeTypes.push({ name: i, expected: eType, received: rType});
                                 }
                             }
                                 break;
@@ -97,7 +97,7 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
                                     const data = isValidData(_receivedData[i], _exptectedData[i].typeT, i)
                                     exractData(data, missingAttributes, mismatchedAttributeTypes);
                                 } else {
-                                    mismatchedAttributeTypes.push(JSON.stringify({ name: i, expected: eType, received: rType }));
+                                    mismatchedAttributeTypes.push({ name: i, expected: eType, received: rType });
                                 }
                             }
                                 break;
