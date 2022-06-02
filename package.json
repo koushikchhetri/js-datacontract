@@ -1,6 +1,6 @@
 {
   "name": "js-datacontract",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript Data Contract",
   "main": "index.js",
   "scripts": {

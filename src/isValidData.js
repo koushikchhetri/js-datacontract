@@ -79,7 +79,7 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
                                     if (_exptectedData[i].typeT) {
                                         if(_receivedData[i].length > 0) {
                                             _receivedData[i].forEach((rValue, rIndex) => {
-                                                const data = isValidData(rValue, _exptectedData[i].typeT, i, rIndex)
+                                                const data = isValidData(rValue, _exptectedData[i].typeT, i, rIndex);
                                                 exractData(data, missingAttributes, mismatchedAttributeTypes);
                                             });
                                         } else {
@@ -94,7 +94,7 @@ function isValidData (_receivedData, _exptectedData, objectKey, arrayIndex = 1) 
 
                             case 'object': {
                                 if (rType === eType) {
-                                    const data = isValidData(_receivedData[i], _exptectedData[i].typeT, i)
+                                    const data = isValidData(_receivedData[i], _exptectedData[i].typeT, i);
                                     exractData(data, missingAttributes, mismatchedAttributeTypes);
                                 } else {
                                     mismatchedAttributeTypes.push({ name: i, expected: eType, received: rType });
